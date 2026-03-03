@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ─────────────────────────────────────────
 # EKS CLUSTER SECURITY GROUP
 # ─────────────────────────────────────────
@@ -50,8 +51,23 @@ resource "aws_eks_cluster" "main" {
     "scheduler"
   ]
 
+=======
+# EKS Cluster
+resource "aws_eks_cluster" "main" {
+  name     = "${var.project_name}-cluster"
+  role_arn = var.cluster_role_arn
+  version  = var.kubernetes_version
+
+  vpc_config {
+    subnet_ids = var.private_subnet_ids
+  }
+
+>>>>>>> e956ddd644047610224b3306fdb3ae99740b3827
   tags = {
     Name = "${var.project_name}-cluster"
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e956ddd644047610224b3306fdb3ae99740b3827

@@ -1,5 +1,9 @@
 variable "project_name" {
+<<<<<<< HEAD
   description = "Name of the project"
+=======
+  description = "Project name"
+>>>>>>> e956ddd644047610224b3306fdb3ae99740b3827
   type        = string
 }
 
@@ -8,6 +12,7 @@ variable "cluster_name" {
   type        = string
 }
 
+<<<<<<< HEAD
 variable "eks_nodes_role_arn" {
   description = "IAM role ARN for EKS nodes"
   type        = string
@@ -48,3 +53,14 @@ variable "max_size" {
   default     = 2
 }
 
+=======
+variable "private_subnet_ids" {
+  description = "Private subnet IDs"
+  type        = list(string)
+}
+
+variable "nodes_role_arn" {
+  description = "EKS nodes role ARN"
+  type        = string
+}
+>>>>>>> e956ddd644047610224b3306fdb3ae99740b3827
